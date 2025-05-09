@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet" />
+  <title>Home</title>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+
+      <!-- Flowbite File Upload component -->
+      <form action="/user/upload" method="POST" enctype="multipart/form-data">
+        <label class="block mb-2 text-sm font-medium text-gray-700" for="file_input">Upload file</label>
+        <input
+          id="file_input"
+          type="file"
+          name="file"
+          class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          aria-describedby="file_input_help"
+        />
+        <p class="mt-1 text-sm text-gray-500" id="file_input_help">Drag and drop or click to select a file</p>
+        <button
+          type="submit"
+          class="mt-4 px-6 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        >
+          Upload
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Flowbite JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.js"></script>
+
+</body>
+</html>
